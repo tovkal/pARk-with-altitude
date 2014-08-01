@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8357D9E5138836520060FADB"
-               BuildableName = "pARk-sense-h.app"
+               BuildableName = "pARk.app"
                BlueprintName = "pARk"
                ReferencedContainer = "container:pARk.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8357D9E5138836520060FADB"
-            BuildableName = "pARk-sense-h.app"
+            BuildableName = "pARk.app"
             BlueprintName = "pARk"
             ReferencedContainer = "container:pARk.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8357D9E5138836520060FADB"
-            BuildableName = "pARk-sense-h.app"
+            BuildableName = "pARk.app"
             BlueprintName = "pARk"
             ReferencedContainer = "container:pARk.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8357D9E5138836520060FADB"
-            BuildableName = "pARk-sense-h.app"
+            BuildableName = "pARk.app"
             BlueprintName = "pARk"
             ReferencedContainer = "container:pARk.xcodeproj">
          </BuildableReference>

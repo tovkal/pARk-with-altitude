@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B6EEA6D13F47D0E00D239C2 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B6EEA6C13F47D0E00D239C2 /* ReadMe.txt */; };
 		8357D9EB138836520060FADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8357D9EA138836520060FADB /* UIKit.framework */; };
 		8357D9ED138836520060FADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8357D9EC138836520060FADB /* Foundation.framework */; };
 		8357D9EF138836520060FADB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8357D9EE138836520060FADB /* CoreGraphics.framework */; };
@@ -30,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B6EEA6C13F47D0E00D239C2 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		8357D9E6138836520060FADB /* pARk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pARk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8357D9EA138836520060FADB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8357D9EC138836520060FADB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				95AD02C5198C2D8300E345BC /* Default-568h@2x.png */,
-				2B6EEA6C13F47D0E00D239C2 /* ReadMe.txt */,
 				8357D9F0138836520060FADB /* pARk */,
 				8357D9E9138836520060FADB /* Frameworks */,
 				8357D9E7138836520060FADB /* Products */,
@@ -196,7 +193,6 @@
 				8357D9FD138836520060FADB /* pARkViewController.h in Resources */,
 				8357DA02138836520060FADB /* pARkViewController_iPhone.xib in Resources */,
 				8357DA05138836520060FADB /* pARkViewController_iPad.xib in Resources */,
-				2B6EEA6D13F47D0E00D239C2 /* ReadMe.txt in Resources */,
 				95AD02C6198C2D8300E345BC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
