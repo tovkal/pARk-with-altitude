@@ -280,7 +280,7 @@ void ecefToEnu(double lat, double lon, double x, double y, double z, double xr, 
 	int i = 0;
 	
 	double myX, myY, myZ;
-	latLonToEcef(location.coordinate.latitude, location.coordinate.longitude, 0.0, &myX, &myY, &myZ);
+	latLonToEcef(location.coordinate.latitude, location.coordinate.longitude, location.altitude, &myX, &myY, &myZ);
 
 	// Array of NSData instances, each of which contains a struct with the distance to a POI and the
 	// POI's index into placesOfInterest
@@ -295,12 +295,12 @@ void ecefToEnu(double lat, double lon, double x, double y, double z, double xr, 
 	for (PlaceOfInterest *poi in [[self placesOfInterest] objectEnumerator]) {
 		double poiX, poiY, poiZ, e, n, u;
 		
-		latLonToEcef(poi.location.coordinate.latitude, poi.location.coordinate.longitude, 0.0, &poiX, &poiY, &poiZ);
+		latLonToEcef(poi.location.coordinate.latitude, poi.location.coordinate.longitude, poi.location.altitude, &poiX, &poiY, &poiZ);
 		ecefToEnu(location.coordinate.latitude, location.coordinate.longitude, myX, myY, myZ, poiX, poiY, poiZ, &e, &n, &u);
 		
 		placesOfInterestCoordinates[i][0] = (float)n;
 		placesOfInterestCoordinates[i][1]= -(float)e;
-		placesOfInterestCoordinates[i][2] = 0.0f;
+		placesOfInterestCoordinates[i][2] = (float)u;
 		placesOfInterestCoordinates[i][3] = 1.0f;
 		
 		// Add struct containing distance and index to orderedDistances

@@ -78,6 +78,8 @@
 		{39.6439214070001, 2.63452117100007},
 		{39.808105448, 2.79431146500008},
 		{39.602582, 2.672421}};
+	
+	double altitudes[4] = {930.78, 209.35, 1436, 60};
     
     int numPois = sizeof(poiCoords) / sizeof(CLLocationCoordinate2D);	
 		
@@ -95,6 +97,8 @@
 		label.bounds = CGRectMake(0.0f, 0.0f, size.width, size.height);
 				
 		PlaceOfInterest *poi = [PlaceOfInterest placeOfInterestWithView:label at:[[[CLLocation alloc] initWithLatitude:poiCoords[i].latitude longitude:poiCoords[i].longitude] autorelease]];
+		poi.name = [NSString stringWithFormat:@"%s" , poiNames[i]];
+		poi.altitude = altitudes[i];
 		[placesOfInterest insertObject:poi atIndex:i];
 	}	
 	[arView setPlacesOfInterest:placesOfInterest];	
