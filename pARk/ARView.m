@@ -181,8 +181,9 @@ void ecefToEnu(double lat, double lon, double x, double y, double z, double xr, 
 	[self addSubview:captureView];
 	[self sendSubviewToBack:captureView];
 	
-	// Initialize projection matrix	
-	createProjectionMatrix(projectionTransform, 60.0f*DEGREES_TO_RADIANS, self.bounds.size.width*1.0f / self.bounds.size.height, 0.25f, 1000.0f);
+	// Initialize projection matrix
+	//Fov angle from: http://stackoverflow.com/a/3594424/1283228
+	createProjectionMatrix(projectionTransform, 61.4f*DEGREES_TO_RADIANS, self.bounds.size.width*1.0f / self.bounds.size.height, 0.25f, 1000.0f);
 }
 
 - (void)startCameraPreview
@@ -295,11 +296,11 @@ void ecefToEnu(double lat, double lon, double x, double y, double z, double xr, 
 	for (PlaceOfInterest *poi in [[self placesOfInterest] objectEnumerator]) {
 		double poiX, poiY, poiZ, e, n, u;
 		
-		latLonToEcef(poi.location.coordinate.latitude, poi.location.coordinate.longitude, poi.location.altitude, &poiX, &poiY, &poiZ);
+		latLonToEcef(poi.location.coordinate.latitude, poi.location.coordinate.longitude, poi.altitude, &poiX, &poiY, &poiZ);
 		ecefToEnu(location.coordinate.latitude, location.coordinate.longitude, myX, myY, myZ, poiX, poiY, poiZ, &e, &n, &u);
 		
 		placesOfInterestCoordinates[i][0] = (float)n;
-		placesOfInterestCoordinates[i][1]= -(float)e;
+		placesOfInterestCoordinates[i][1] = -(float)e;
 		placesOfInterestCoordinates[i][2] = (float)u;
 		placesOfInterestCoordinates[i][3] = 1.0f;
 		

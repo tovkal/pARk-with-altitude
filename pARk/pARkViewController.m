@@ -68,18 +68,53 @@
 	
 	// Create array of hard-coded places-of-interest, in this case some famous parks
     const char *poiNames[] = {
-		"Sa Galera",
+		"Torre Asima",
 		"Puig de Son Espanyol",
 		"Puig Major",
-		"Torre Asima"};
+		"Pujol des Gat",
+		"Sa Falconera",
+		"Puig de Son Nací",
+		"Puig de Son Poc",
+		"Puig de n'Angelè",
+		"Puig de s'Artijar",
+		"Penyal d'Honor"
+	};
 	
     CLLocationCoordinate2D poiCoords[] = {
-		{39.747497465, 2.67169181900005},
+		{39.601748, 2.673369},
 		{39.6439214070001, 2.63452117100007},
 		{39.808105448, 2.79431146500008},
-		{39.602582, 2.672421}};
+		{39.590271617, 2.56347608800007},
+		{39.691669, 2.669703},
+		{39.699852, 2.678229},
+		{39.7031250220001, 2.68371576300007},
+		{39.722153, 2.662731},
+		{39.734574, 2.711631},
+		{39.716307, 2.7227}
+	};
 	
-	double altitudes[4] = {930.78, 209.35, 1436, 60};
+	double altures[] = {
+		60,
+		209.35,
+		1436,
+		509.46,
+		530.37,
+		575.62,
+		493.81,
+		969.14,
+		1026.31,
+		808.54
+	};
+	
+	if (sizeof(poiNames) / 4 != sizeof(poiCoords)/16) {
+		NSLog(@"# Names!=coordenades");
+		abort();
+	} else {
+		if (sizeof(poiNames) / 4 != sizeof(altures) / 8) {
+			NSLog(@"# Names!=altures");
+			abort();
+		}
+	}
     
     int numPois = sizeof(poiCoords) / sizeof(CLLocationCoordinate2D);	
 		
@@ -97,8 +132,7 @@
 		label.bounds = CGRectMake(0.0f, 0.0f, size.width, size.height);
 				
 		PlaceOfInterest *poi = [PlaceOfInterest placeOfInterestWithView:label at:[[[CLLocation alloc] initWithLatitude:poiCoords[i].latitude longitude:poiCoords[i].longitude] autorelease]];
-		poi.name = [NSString stringWithFormat:@"%s" , poiNames[i]];
-		poi.altitude = altitudes[i];
+		poi.altitude = altures[i];
 		[placesOfInterest insertObject:poi atIndex:i];
 	}	
 	[arView setPlacesOfInterest:placesOfInterest];	

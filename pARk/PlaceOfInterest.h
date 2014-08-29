@@ -54,7 +54,6 @@
 @property (nonatomic, retain) UIView *view;
 @property (nonatomic, retain) CLLocation *location;
 @property double altitude;
-@property (nonatomic, strong) NSString *name;
 
 + (PlaceOfInterest *)placeOfInterestWithView:(UIView *)view at:(CLLocation *)location;
 
